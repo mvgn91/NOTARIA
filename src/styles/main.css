@@ -134,7 +134,7 @@ body {
 }
 
 .nav__logo {
-  height: 60px;
+  height: 80px;
   width: auto;
   transition: var(--transition);
 }
@@ -1135,7 +1135,7 @@ body {
   }
 
   .nav__logo {
-    height: 60px; /* Ajuste para móvil */
+    height: 70px; /* Ajuste para móvil */
   }
 
   .nav__title {
@@ -1210,7 +1210,7 @@ body {
   }
 
   .nav__logo {
-    height: 50px;
+    height: 60px;
   }
 
   .nav__title {
