@@ -776,6 +776,118 @@ body {
   transform: scale(1.05);
 }
 
+/* Installations Section */
+.installations {
+  padding: 80px 0;
+  background-color: var(--background-light);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo interactivo para installations */
+.installations::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 35%, rgba(45, 76, 57, 0.02) 0%, transparent 20%),
+    radial-gradient(circle at 75% 65%, rgba(240, 215, 140, 0.02) 0%, transparent 20%);
+  animation: installationsPulse 22s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes installationsPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.installations .container {
+  position: relative;
+  z-index: 2;
+}
+
+.installations__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.installations__title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.installations__description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.installations__features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.installations__feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.installations__feature i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.installations__gallery {
+  position: relative;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  height: 400px;
+}
+
+.gallery__item {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.gallery__item--large {
+  grid-row: 1 / 3;
+}
+
+.gallery__item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.gallery__item:hover .gallery__img {
+  transform: scale(1.05);
+}
+
 /* Contact Section */
 .contact {
   padding: 80px 0;
@@ -1173,6 +1285,11 @@ body {
     gap: 40px;
   }
 
+  .installations__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   .contact__content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1201,6 +1318,20 @@ body {
     width: 100%;
     max-width: 300px;
     justify-content: center;
+  }
+
+  .gallery__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+  }
+
+  .gallery__item--large {
+    grid-row: auto;
+  }
+
+  .gallery__item {
+    height: 200px;
   }
 }
 
