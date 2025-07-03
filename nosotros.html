@@ -87,13 +87,140 @@
                         </div>
                     </div>
                 </div>
-                <div class="about__image">
-                    <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg" 
-                         alt="Oficina de la Notaría" class="about__img">
+                <div class="about__gallery">
+                    <div class="gallery-slider" id="history-slider">
+                        <div class="gallery-slider__container">
+                            <div class="gallery-slider__slide active">
+                                <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg" 
+                                     alt="Oficina de la Notaría" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg" 
+                                     alt="Equipo de trabajo" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg" 
+                                     alt="Documentos notariales" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" 
+                                     alt="Archivo histórico" class="gallery-slider__img">
+                            </div>
+                        </div>
+                        <button class="gallery-slider__btn gallery-slider__btn--prev" data-slider="history-slider">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-slider__btn gallery-slider__btn--next" data-slider="history-slider">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="gallery-slider__indicators">
+                            <button class="gallery-slider__indicator active" data-slide="0"></button>
+                            <button class="gallery-slider__indicator" data-slide="1"></button>
+                            <button class="gallery-slider__indicator" data-slide="2"></button>
+                            <button class="gallery-slider__indicator" data-slide="3"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Installations Section -->
+    <section class="installations">
+        <div class="container">
+            <div class="installations__content">
+                <div class="installations__text">
+                    <h2 class="installations__title">Nuestras Instalaciones</h2>
+                    <p class="installations__description">
+                        Contamos con modernas instalaciones diseñadas para brindar un ambiente profesional y cómodo 
+                        a nuestros clientes. Nuestras oficinas están estratégicamente ubicadas en el corazón de Guadalajara, 
+                        con fácil acceso y estacionamiento disponible.
+                    </p>
+                    <p class="installations__description">
+                        Cada espacio ha sido cuidadosamente diseñado para garantizar la privacidad y confidencialidad 
+                        que requieren los actos notariales, contando con la tecnología más avanzada para agilizar 
+                        los procesos y brindar un servicio de excelencia.
+                    </p>
+                    <div class="installations__features">
+                        <div class="installations__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Salas de juntas privadas</span>
+                        </div>
+                        <div class="installations__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tecnología de vanguardia</span>
+                        </div>
+                        <div class="installations__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Estacionamiento disponible</span>
+                        </div>
+                        <div class="installations__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Acceso para personas con discapacidad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="installations__gallery">
+                    <div class="gallery-slider" id="installations-slider">
+                        <div class="gallery-slider__container">
+                            <div class="gallery-slider__slide active">
+                                <img src="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg" 
+                                     alt="Recepción de la Notaría" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg" 
+                                     alt="Sala de juntas" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" 
+                                     alt="Oficina privada" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg" 
+                                     alt="Área de espera" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg" 
+                                     alt="Archivo digital" class="gallery-slider__img">
+                            </div>
+                        </div>
+                        <button class="gallery-slider__btn gallery-slider__btn--prev" data-slider="installations-slider">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-slider__btn gallery-slider__btn--next" data-slider="installations-slider">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="gallery-slider__indicators">
+                            <button class="gallery-slider__indicator active" data-slide="0"></button>
+                            <button class="gallery-slider__indicator" data-slide="1"></button>
+                            <button class="gallery-slider__indicator" data-slide="2"></button>
+                            <button class="gallery-slider__indicator" data-slide="3"></button>
+                            <button class="gallery-slider__indicator" data-slide="4"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes -->
+    <div id="image-modal" class="image-modal">
+        <div class="image-modal__overlay"></div>
+        <div class="image-modal__content">
+            <button class="image-modal__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="" class="image-modal__img">
+            <div class="image-modal__navigation">
+                <button class="image-modal__btn image-modal__btn--prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="image-modal__btn image-modal__btn--next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
