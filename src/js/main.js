@@ -133,10 +133,10 @@ class GallerySlider {
         
         // Event listeners para abrir modal al hacer click en imagen
         this.slides.forEach((slide, index) => {
-            slide.addEventListener('click', () => {
+            slide.addEventListener('click', (e) => {
                 const img = slide.querySelector('.gallery-slider__img');
                 if (img) {
-                    openImageModal(img.src, img.alt, this.getAllImages(), index);
+                    openImageModal(img, this.getAllImages(), index);
                 }
             });
         });
@@ -184,31 +184,69 @@ class GallerySlider {
     }
 }
 
-// Image Modal functionality
+// Image Modal functionality con animación mejorada
 let currentModalImages = [];
 let currentModalIndex = 0;
 
-function openImageModal(src, alt, images = [], index = 0) {
+function openImageModal(clickedImg, images = [], index = 0) {
     const modal = document.getElementById('image-modal');
     const modalImg = modal.querySelector('.image-modal__img');
     
-    currentModalImages = images.length > 0 ? images : [{ src, alt }];
+    currentModalImages = images.length > 0 ? images : [{ src: clickedImg.src, alt: clickedImg.alt }];
     currentModalIndex = index;
     
-    modalImg.src = src;
-    modalImg.alt = alt;
+    // Obtener posición y tamaño de la imagen original
+    const rect = clickedImg.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    
+    // Configurar imagen del modal
+    modalImg.src = clickedImg.src;
+    modalImg.alt = clickedImg.alt;
+    
+    // Configurar posición inicial del modal (donde está la imagen original)
+    const modalContent = modal.querySelector('.image-modal__content');
+    modalContent.style.position = 'fixed';
+    modalContent.style.top = rect.top + 'px';
+    modalContent.style.left = rect.left + 'px';
+    modalContent.style.width = rect.width + 'px';
+    modalContent.style.height = rect.height + 'px';
+    modalContent.style.transform = 'scale(1)';
+    modalContent.style.opacity = '1';
+    
+    // Mostrar modal
     modal.classList.add('active');
     
     // Prevenir scroll del body
     document.body.style.overflow = 'hidden';
+    
+    // Animar a la posición final después de un frame
+    requestAnimationFrame(() => {
+        modalContent.style.position = 'relative';
+        modalContent.style.top = 'auto';
+        modalContent.style.left = 'auto';
+        modalContent.style.width = 'auto';
+        modalContent.style.height = 'auto';
+        modalContent.style.maxWidth = '90vw';
+        modalContent.style.maxHeight = '90vh';
+        modalContent.style.transform = 'scale(1)';
+        modalContent.style.opacity = '1';
+    });
 }
 
 function closeImageModal() {
     const modal = document.getElementById('image-modal');
-    modal.classList.remove('active');
+    const modalContent = modal.querySelector('.image-modal__content');
     
-    // Restaurar scroll del body
-    document.body.style.overflow = '';
+    // Animar salida
+    modalContent.style.transform = 'scale(0.8)';
+    modalContent.style.opacity = '0';
+    
+    setTimeout(() => {
+        modal.classList.remove('active');
+        // Restaurar scroll del body
+        document.body.style.overflow = '';
+    }, 300);
 }
 
 function showModalImage(index) {
@@ -216,10 +254,20 @@ function showModalImage(index) {
     
     const modal = document.getElementById('image-modal');
     const modalImg = modal.querySelector('.image-modal__img');
+    const modalContent = modal.querySelector('.image-modal__content');
     
-    currentModalIndex = index;
-    modalImg.src = currentModalImages[index].src;
-    modalImg.alt = currentModalImages[index].alt;
+    // Animación de transición
+    modalContent.style.opacity = '0.7';
+    modalContent.style.transform = 'scale(0.95)';
+    
+    setTimeout(() => {
+        currentModalIndex = index;
+        modalImg.src = currentModalImages[index].src;
+        modalImg.alt = currentModalImages[index].alt;
+        
+        modalContent.style.opacity = '1';
+        modalContent.style.transform = 'scale(1)';
+    }, 150);
 }
 
 function nextModalImage() {
@@ -408,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nextBtn.addEventListener('click', nextModalImage);
         }
         
-        // Cerrar modal con tecla Escape
+        // Cerrar modal con tecla Escape y navegación con flechas
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.classList.contains('active')) {
                 closeImageModal();
