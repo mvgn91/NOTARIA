@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notaría Pública #80 - Móvil</title>
+    <meta name="description" content="Notaría Pública #80 en Guadalajara, Jalisco. Servicios notariales profesionales. Lic. María Enriqueta Ortiz Guerrero.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/styles/mobile.css">
+</head>
+<body>
+    <!-- Header Móvil -->
+    <header class="mobile-header">
+        <div class="mobile-header__container">
+            <div class="mobile-header__brand">
+                <img src="../public/logo notaria 80 verde.png" alt="Notaría Pública #80" class="mobile-header__logo">
+                <div class="mobile-header__title">NOTARÍA PÚBLICA #80</div>
+            </div>
+            <div class="mobile-header__actions">
+                <button class="mobile-header__desktop-btn" onclick="MobileDetector.showDesktop()">
+                    <i class="fas fa-desktop"></i>
+                    <span>Versión completa</span>
+                </button>
+                <button class="mobile-header__menu-btn" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menú móvil -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul class="mobile-nav__list">
+                <li><a href="#servicios" class="mobile-nav__link">Servicios</a></li>
+                <li><a href="#testimonios" class="mobile-nav__link">Testimonios</a></li>
+                <li><a href="#contacto" class="mobile-nav__link">Contacto</a></li>
+                <li><a href="../ubicacion.html" class="mobile-nav__link">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Móvil -->
+    <section class="mobile-hero">
+        <div class="mobile-hero__background"></div>
+        <div class="mobile-hero__content">
+            <h1 class="mobile-hero__title">
+                COMPROMETIDOS CON LA JUSTICIA ACCESIBLE, CERCANA Y HUMANA
+            </h1>
+            <p class="mobile-hero__subtitle">
+                Más de una década de experiencia notarial en Guadalajara
+            </p>
+            <div class="mobile-hero__buttons">
+                <a href="tel:+523336666666" class="mobile-btn mobile-btn--primary">
+                    <i class="fas fa-phone"></i>
+                    Llamar ahora
+                </a>
+                <a href="#servicios" class="mobile-btn mobile-btn--secondary">
+                    <i class="fas fa-list"></i>
+                    Ver servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Principales -->
+    <section class="mobile-services" id="servicios">
+        <div class="mobile-services__container">
+            <h2 class="mobile-services__title">Nuestros Servicios</h2>
+            <div class="mobile-services__grid">
+                <div class="mobile-service-card">
+                    <div class="mobile-service-card__icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="mobile-service-card__title">Escrituras</h3>
+                    <p class="mobile-service-card__description">
+                        Compraventas, donaciones, hipotecas y más
+                    </p>
+                </div>
+                
+                <div class="mobile-service-card">
+                    <div class="mobile-service-card__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="mobile-service-card__title">Certificaciones</h3>
+                    <p class="mobile-service-card__description">
+                        Documentos, firmas y copias certificadas
+                    </p>
+                </div>
+                
+                <div class="mobile-service-card">
+                    <div class="mobile-service-card__icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="mobile-service-card__title">Poderes</h3>
+                    <p class="mobile-service-card__description">
+                        Poderes generales y especiales
+                    </p>
+                </div>
+                
+                <div class="mobile-service-card">
+                    <div class="mobile-service-card__icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="mobile-service-card__title">Testamentos</h3>
+                    <p class="mobile-service-card__description">
+                        Testamentos públicos y privados
+                    </p>
+                </div>
+            </div>
+            <div class="mobile-services__cta">
+                <a href="../servicios.html" class="mobile-btn mobile-btn--outline">
+                    Ver todos los servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Móvil -->
+    <section class="mobile-testimonials" id="testimonios">
+        <div class="mobile-testimonials__container">
+            <h2 class="mobile-testimonials__title">Testimonios</h2>
+            <div class="mobile-testimonials__slider">
+                <div class="mobile-testimonial-card mobile-testimonial-card--active">
+                    <div class="mobile-testimonial-card__content">
+                        <p>"En La Notaría 80, el personal son muy profesionales muy capacitado en su ramo, fui atendida por el Lic. Miguel Magaña y todo el tramite fue muy fácil de entenderlo."</p>
+                    </div>
+                    <div class="mobile-testimonial-card__author">
+                        <div class="mobile-testimonial-card__avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="mobile-testimonial-card__info">
+                            <h4>Ana Bertha Jiménez</h4>
+                            <span>Cliente Satisfecha</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mobile-testimonial-card">
+                    <div class="mobile-testimonial-card__content">
+                        <p>"Fui para certificar mi cédula y la verdad me sorprendió lo rápido que me atendieron desde que llegué el personal fue muy amable y me explicaron todo con paciencia."</p>
+                    </div>
+                    <div class="mobile-testimonial-card__author">
+                        <div class="mobile-testimonial-card__avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="mobile-testimonial-card__info">
+                            <h4>Adrián B.</h4>
+                            <span>Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-testimonials__controls">
+                <button class="mobile-testimonials__dot mobile-testimonials__dot--active" data-slide="0"></button>
+                <button class="mobile-testimonials__dot" data-slide="1"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Rápido -->
+    <section class="mobile-contact" id="contacto">
+        <div class="mobile-contact__container">
+            <h2 class="mobile-contact__title">Contacto Rápido</h2>
+            <div class="mobile-contact__grid">
+                <a href="tel:+523336666666" class="mobile-contact-card">
+                    <div class="mobile-contact-card__icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="mobile-contact-card__content">
+                        <h3>Llamar</h3>
+                        <p>33 3666 6666</p>
+                    </div>
+                </a>
+                
+                <a href="mailto:contacto@notaria80gdl.mx" class="mobile-contact-card">
+                    <div class="mobile-contact-card__icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="mobile-contact-card__content">
+                        <h3>Email</h3>
+                        <p>contacto@notaria80gdl.mx</p>
+                    </div>
+                </a>
+                
+                <a href="https://maps.google.com/?q=Notaría+Pública+80+Guadalajara" target="_blank" class="mobile-contact-card">
+                    <div class="mobile-contact-card__icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="mobile-contact-card__content">
+                        <h3>Ubicación</h3>
+                        <p>Ver en Google Maps</p>
+                    </div>
+                </a>
+                
+                <div class="mobile-contact-card">
+                    <div class="mobile-contact-card__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="mobile-contact-card__content">
+                        <h3>Horarios</h3>
+                        <p>Lun-Vie: 9:00 - 18:00<br>Sáb: 9:00 - 14:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Móvil -->
+    <footer class="mobile-footer">
+        <div class="mobile-footer__container">
+            <div class="mobile-footer__brand">
+                <img src="../public/logo notaria 80 verde.png" alt="Notaría Pública #80" class="mobile-footer__logo">
+                <div class="mobile-footer__title">NOTARÍA PÚBLICA #80</div>
+            </div>
+            <div class="mobile-footer__info">
+                <p>Lic. María Enriqueta Ortiz Guerrero</p>
+                <p>Notaria Pública #80 del Estado de Jalisco</p>
+            </div>
+            <div class="mobile-footer__actions">
+                <button class="mobile-footer__desktop-btn" onclick="MobileDetector.showDesktop()">
+                    <i class="fas fa-desktop"></i>
+                    Ver versión completa
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/js/mobile-detection.js"></script>
+    <script src="../src/js/mobile.js"></script>
+</body>
+</html> 
