@@ -1,1 +1,292 @@
-nosotros.html
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Notaría Pública #80</title>
+    <meta name="description" content="Conoce más sobre la Notaría Pública #80 y la Lic. María Enriqueta Ortiz Guerrero. Más de 15 años de experiencia en servicios notariales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <img src="./public/logo notaria 80 verde.png" 
+                     alt="Notaría Pública #80" class="nav__logo">
+                <div class="nav__brand-text">
+                    <h1 class="nav__title">NOTARÍA PÚBLICA #80</h1>
+                </div>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">INICIO</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="nosotros.html" class="nav__link active">NOSOTROS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="servicios.html" class="nav__link">ÁREA PRÁCTICA</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="ubicacion.html" class="nav__link">UBICACIÓN</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Sobre Nosotros</h1>
+            <p class="page-subtitle">Conoce nuestra trayectoria y compromiso con la excelencia notarial</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about__content">
+                <div class="about__text">
+                    <h2 class="about__title">Nuestra Historia</h2>
+                    <p class="about__description">
+                        La Notaría Pública #80 de Guadalajara, bajo la titularidad de la Lic. María Enriqueta Ortiz Guerrero, 
+                        se ha consolidado como una institución de confianza en el ámbito notarial jalisciense.
+                    </p>
+                    <p class="about__description">
+                        Con más de década y media de experiencia, ofrecemos servicios notariales especializados con el más alto 
+                        nivel de profesionalismo, garantizando la seguridad jurídica que nuestros clientes merecen.
+                    </p>
+                    <div class="about__features">
+                        <div class="about__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Experiencia comprobada</span>
+                        </div>
+                        <div class="about__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atención personalizada</span>
+                        </div>
+                        <div class="about__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tecnología moderna</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__gallery">
+                    <div class="gallery-slider" id="history-slider">
+                        <div class="gallery-slider__container">
+                            <div class="gallery-slider__slide active">
+                                <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg" 
+                                     alt="Oficina de la Notaría" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg" 
+                                     alt="Equipo de trabajo" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg" 
+                                     alt="Documentos notariales" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" 
+                                     alt="Archivo histórico" class="gallery-slider__img">
+                            </div>
+                        </div>
+                        <button class="gallery-slider__btn gallery-slider__btn--prev" data-slider="history-slider">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-slider__btn gallery-slider__btn--next" data-slider="history-slider">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="gallery-slider__indicators">
+                            <button class="gallery-slider__indicator active" data-slide="0"></button>
+                            <button class="gallery-slider__indicator" data-slide="1"></button>
+                            <button class="gallery-slider__indicator" data-slide="2"></button>
+                            <button class="gallery-slider__indicator" data-slide="3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installations Section -->
+    <section class="installations">
+        <div class="container">
+            <div class="installations__content">
+                <div class="installations__text">
+                    <h2 class="installations__title">Nuestras Instalaciones</h2>
+                    <p class="installations__description">
+                        Contamos con modernas instalaciones diseñadas para brindar un ambiente profesional y cómodo 
+                        a nuestros clientes. Nuestras oficinas están estratégicamente ubicadas en el corazón de Guadalajara, 
+                        con fácil acceso y estacionamiento disponible.
+                    </p>
+                    <p class="installations__description">
+                        Cada espacio ha sido cuidadosamente diseñado para garantizar la privacidad y confidencialidad 
+                        que requieren los actos notariales, contando con la tecnología más avanzada para agilizar 
+                        los procesos y brindar un servicio de excelencia.
+                    </p>
+                    <div class="installations__features">
+                        <div class="installations__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Salas de juntas privadas</span>
+                        </div>
+                        <div class="installations__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tecnología de vanguardia</span>
+                        </div>
+                        <div class="installations__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Estacionamiento disponible</span>
+                        </div>
+                        <div class="installations__feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Acceso para personas con discapacidad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="installations__gallery">
+                    <div class="gallery-slider" id="installations-slider">
+                        <div class="gallery-slider__container">
+                            <div class="gallery-slider__slide active">
+                                <img src="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg" 
+                                     alt="Recepción de la Notaría" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg" 
+                                     alt="Sala de juntas" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" 
+                                     alt="Oficina privada" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg" 
+                                     alt="Área de espera" class="gallery-slider__img">
+                            </div>
+                            <div class="gallery-slider__slide">
+                                <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg" 
+                                     alt="Archivo digital" class="gallery-slider__img">
+                            </div>
+                        </div>
+                        <button class="gallery-slider__btn gallery-slider__btn--prev" data-slider="installations-slider">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-slider__btn gallery-slider__btn--next" data-slider="installations-slider">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="gallery-slider__indicators">
+                            <button class="gallery-slider__indicator active" data-slide="0"></button>
+                            <button class="gallery-slider__indicator" data-slide="1"></button>
+                            <button class="gallery-slider__indicator" data-slide="2"></button>
+                            <button class="gallery-slider__indicator" data-slide="3"></button>
+                            <button class="gallery-slider__indicator" data-slide="4"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes -->
+    <div id="image-modal" class="image-modal">
+        <div class="image-modal__overlay"></div>
+        <div class="image-modal__content">
+            <button class="image-modal__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="" class="image-modal__img">
+            <div class="image-modal__navigation">
+                <button class="image-modal__btn image-modal__btn--prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="image-modal__btn image-modal__btn--next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content container">
+            <div class="footer__info">
+                <div class="footer__item">
+                    <div class="footer__icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="footer__details">
+                        <h4>Titular</h4>
+                        <p>Lic. María Enriqueta<br>Ortiz Guerrero</p>
+                    </div>
+                </div>
+                
+                <div class="footer__item">
+                    <div class="footer__icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="footer__details">
+                        <h4>Dirección</h4>
+                        <p>C. Pablo Villaseñor 125<br>
+                           Ladrón De Guevara<br>
+                           44650 Guadalajara, Jal.</p>
+                    </div>
+                </div>
+                
+                <div class="footer__item">
+                    <div class="footer__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="footer__details">
+                        <h4>Horario</h4>
+                        <p>Lunes a Viernes<br>9:00 AM – 5:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="footer__item">
+                    <div class="footer__icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="footer__details">
+                        <h4>Teléfono</h4>
+                        <p><a href="tel:+523319833355">33 1983 3355</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer__item">
+                    <div class="footer__icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="footer__details">
+                        <h4>Correo</h4>
+                        <p><a href="mailto:notaria80gdl@hotmail.com">notaria80gdl@hotmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; NOTARÍA 80 GUADALAJARA. TODOS LOS DERECHOS RESERVADOS MMXXV.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./src/js/main.js"></script>
+</body>
+</html>
