@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
   background-color: var(--background-light);
@@ -50,6 +50,7 @@ body {
   transition: var(--transition);
   border: 2px solid transparent;
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
 }
 
 .btn--primary {
@@ -83,7 +84,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
@@ -144,7 +145,7 @@ body {
 }
 
 .nav__title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--primary-color);
@@ -166,6 +167,7 @@ body {
   padding: 8px 16px;
   border-radius: var(--border-radius);
   transition: var(--transition);
+  font-family: 'Inter', sans-serif;
 }
 
 .nav__link:hover,
@@ -201,9 +203,8 @@ body {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 8%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 8%),
-    linear-gradient(45deg, transparent 30%, rgba(240, 215, 140, 0.03) 50%, transparent 70%);
+    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(240, 215, 140, 0.03) 50%, transparent 70%);
   animation: backgroundMove 20s ease-in-out infinite;
   z-index: 1;
 }
@@ -215,13 +216,11 @@ body {
 
 @keyframes backgroundMove {
   0%, 100% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(-10px) translateY(-5px); }
-  50% { transform: translateX(10px) translateY(5px); }
-  75% { transform: translateX(-5px) translateY(10px); }
+  50% { transform: translateX(10px) translateY(-10px); }
 }
 
 .page-title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 16px;
@@ -230,8 +229,7 @@ body {
 .page-subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Hero Section */
@@ -286,11 +284,11 @@ body {
 }
 
 .hero__title {
-  font-family: 'Merriweather', serif;
-  font-size: 3rem;
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
   font-weight: 700;
-  line-height: 1.2;
   margin-bottom: 30px;
+  line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -616,7 +614,7 @@ body {
 }
 
 .clients__title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
@@ -757,7 +755,7 @@ body {
 }
 
 .testimonials__title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-light);
@@ -791,7 +789,7 @@ body {
 
 .testimonial-card {
   background: white;
-  padding: 25px;
+  padding: 30px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   position: relative;
@@ -800,6 +798,19 @@ body {
   min-height: 280px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transform: scaleX(0);
+  transition: var(--transition);
 }
 
 .testimonial-card:hover {
@@ -808,67 +819,92 @@ body {
   border-color: var(--accent-color);
 }
 
+.testimonial-card:hover::before {
+  transform: scaleX(1);
+}
+
 .testimonial-card__quote {
   position: absolute;
   top: -15px;
-  left: 25px;
-  background-color: var(--primary-color);
+  left: 30px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   color: var(--text-light);
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   z-index: 2;
+  box-shadow: 0 4px 15px rgba(45, 76, 57, 0.3);
 }
 
 .testimonial-card__content {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   flex-grow: 1;
+  position: relative;
+}
+
+.testimonial-card__content::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  font-size: 4rem;
+  color: var(--accent-color);
+  opacity: 0.2;
+  font-family: 'Lora', serif;
+  line-height: 1;
 }
 
 .testimonial-card__content p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: var(--text-dark);
   font-style: italic;
   margin: 0;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .testimonial-card__author {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(45, 76, 57, 0.1);
 }
 
 .testimonial-card__avatar {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   color: var(--text-light);
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(45, 76, 57, 0.2);
 }
 
 .testimonial-card__info h4 {
-  font-family: 'Merriweather', serif;
-  font-size: 1rem;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary-color);
   margin: 0 0 3px 0;
 }
 
 .testimonial-card__info span {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-dark);
   opacity: 0.7;
+  font-family: 'Inter', sans-serif;
 }
 
 .testimonials__trust {
@@ -926,7 +962,7 @@ body {
 }
 
 .mission-vision__title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
@@ -954,12 +990,14 @@ body {
 .mission-vision__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .mission-vision__card {
   background: white;
-  padding: 40px 30px;
+  padding: 30px 25px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   text-align: center;
@@ -967,6 +1005,11 @@ body {
   border: 2px solid transparent;
   position: relative;
   overflow: hidden;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
 }
 
 .mission-vision__card::before {
@@ -994,14 +1037,14 @@ body {
 .mission-vision__icon {
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   color: var(--text-light);
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  margin: 0 auto 25px;
+  font-size: 1.8rem;
+  margin: 0 auto 20px;
   transition: var(--transition);
 }
 
@@ -1011,18 +1054,19 @@ body {
 }
 
 .mission-vision__card-title {
-  font-family: 'Merriweather', serif;
-  font-size: 1.5rem;
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .mission-vision__card-content {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-dark);
   opacity: 0.8;
+  font-family: 'Inter', sans-serif;
 }
 
 .mission-vision__card-content strong {
@@ -1071,7 +1115,7 @@ body {
 }
 
 .about__title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
@@ -1362,7 +1406,7 @@ body {
 }
 
 .installations__title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
@@ -1499,7 +1543,7 @@ body {
 }
 
 .contact__form-title {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--primary-color);
@@ -1683,6 +1727,7 @@ body {
 }
 
 .footer__details h4 {
+  font-family: 'Lora', serif;
   font-weight: 600;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -1723,38 +1768,104 @@ body {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 80%;
+    width: 85%;
     height: 100vh;
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, rgba(246, 243, 235, 0.95) 100%);
+    backdrop-filter: blur(10px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(45, 76, 57, 0.1);
   }
 
   .nav__menu.show {
     right: 0;
+    transform: translateX(0);
   }
 
   .nav__list {
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .nav__item {
+    width: 100%;
+    margin: 5px 0;
   }
 
   .nav__link {
     font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(45, 76, 57, 0.1);
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .nav__link:hover,
+  .nav__link.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-light);
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(45, 76, 57, 0.3);
   }
 
   .nav__toggle,
   .nav__close {
     display: block;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
   }
 
   .nav__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(45, 76, 57, 0.1);
+  }
+
+  .nav__close:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+    transform: scale(1.1);
+  }
+
+  .nav__toggle {
+    background: rgba(255, 255, 255, 0.9);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(45, 76, 57, 0.1);
+  }
+
+  .nav__toggle:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+    transform: scale(1.1);
   }
 
   .nav__logo {
