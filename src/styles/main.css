@@ -847,9 +847,15 @@ body {
 }
 
 .testimonial-card__content {
-  margin-bottom: 25px;
-  flex-grow: 1;
-  position: relative;
+  color: #fff !important;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0 0 28px 0;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  max-width: 700px;
+  z-index: 2;
 }
 
 .testimonial-card__content::before {
@@ -2494,6 +2500,7 @@ body {
 }
 
 .testimonial-card__content {
+  color: #fff !important;
   font-size: 2rem;
   line-height: 1.5;
   font-style: italic;
@@ -2501,7 +2508,7 @@ body {
   font-family: 'Inter', sans-serif;
   text-align: center;
   max-width: 700px;
-  color: #fff !important;
+  z-index: 2;
 }
 
 .testimonial-card__author {
