@@ -390,6 +390,62 @@ function animateCounters() {
     });
 }
 
+// Testimonios slider
+function initTestimonialsSlider() {
+    const track = document.querySelector('.testimonials-slider__track');
+    const slides = Array.from(document.querySelectorAll('.testimonial-card--slide'));
+    const prevBtn = document.querySelector('.testimonials-slider__arrow--prev');
+    const nextBtn = document.querySelector('.testimonials-slider__arrow--next');
+    const dotsContainer = document.querySelector('.testimonials-slider__dots');
+    let current = 0;
+    let interval = null;
+
+    function goToSlide(idx) {
+        current = (idx + slides.length) % slides.length;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        updateDots();
+    }
+
+    function nextSlide() {
+        goToSlide(current + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(current - 1);
+    }
+
+    function updateDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        slides.forEach((_, idx) => {
+            const dot = document.createElement('div');
+            dot.className = 'testimonials-slider__dot' + (idx === current ? ' active' : '');
+            dot.addEventListener('click', () => goToSlide(idx));
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    function startAuto() {
+        interval = setInterval(nextSlide, 6000);
+    }
+    function stopAuto() {
+        clearInterval(interval);
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); stopAuto(); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); stopAuto(); startAuto(); });
+
+    goToSlide(0);
+    updateDots();
+    startAuto();
+
+    // Pausar en hover
+    if (track) {
+        track.addEventListener('mouseenter', stopAuto);
+        track.addEventListener('mouseleave', startAuto);
+    }
+}
+
 // Inicializar todo cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     // Actualizar navegación activa
@@ -469,6 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    initTestimonialsSlider();
 });
 
 // Manejo de errores para imágenes
