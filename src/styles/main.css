@@ -56,13 +56,13 @@ body {
 .btn--primary {
   background-color: var(--primary-color);
   color: var(--text-light);
-  border-color: var(--primary-color);
+  border: 2px solid var(--text-light);
 }
 
 .btn--primary:hover {
   background-color: var(--text-light);
   color: var(--primary-color);
-  border-color: var(--text-light);
+  border: 2px solid var(--primary-color);
   transform: translateY(-2px);
 }
 
@@ -1893,7 +1893,10 @@ body {
     border-bottom: 1px solid rgba(45, 76, 57, 0.1);
     transition: var(--transition);
     font-family: 'Inter', sans-serif;
-    margin-top: 20px;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .nav__mobile-toggle:hover {
