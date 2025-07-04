@@ -580,10 +580,10 @@ body {
 
 /* Clients Section */
 .clients {
-  background-color: var(--primary-color);
-  padding: 0;
-  overflow: hidden;
+  background-color: var(--background-light);
+  padding: 80px 0;
   position: relative;
+  overflow: hidden;
 }
 
 /* Fondo interactivo para clients */
@@ -594,95 +594,294 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
-  animation: clientsShimmer 8s ease-in-out infinite;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(45, 76, 57, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(240, 215, 140, 0.03) 0%, transparent 50%);
+  animation: clientsShimmer 15s ease-in-out infinite;
   z-index: 1;
 }
 
 @keyframes clientsShimmer {
-  0%, 100% { transform: translateX(-100%); }
-  50% { transform: translateX(100%); }
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
 }
 
-.clients__tape {
+.clients .container {
   position: relative;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 2;
+}
+
+.clients__header {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .clients__title {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0 30px;
-  background-color: var(--secondary-color);
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: var(--primary-color);
-  font-size: 1rem;
-  font-weight: bold;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-  z-index: 2;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
+  margin-bottom: 16px;
+  position: relative;
 }
 
-.clients__title i {
-  font-size: 1.5rem;
+.clients__title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 15px auto 0;
 }
 
-.clients__carousel-wrapper {
-  margin-left: 200px;
+.clients__subtitle {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+.clients__showcase {
   overflow: hidden;
-  width: 100%;
+  position: relative;
 }
 
 .clients__carousel {
   display: flex;
-  gap: 60px;
-  animation: scroll 40s linear infinite;
+  gap: 30px;
+  animation: scroll 60s linear infinite;
   white-space: nowrap;
+  padding: 20px 0;
 }
 
-.client-logo {
+.client-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 0 0 auto;
-  color: var(--secondary-color);
+  flex: 0 0 280px;
+  background: white;
+  padding: 30px 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 2px solid transparent;
+  text-align: center;
+  min-height: 200px;
 }
 
-.client-logo i {
-  font-size: 2.5rem;
-  margin-bottom: 8px;
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.client-card__icon {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
   transition: var(--transition);
 }
 
-.client-logo span {
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.client-logo:hover i {
+.client-card:hover .client-card__icon {
   transform: scale(1.1);
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--primary-color);
 }
 
-.clients__tape:hover .clients__carousel {
+.client-card__name {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.client-card__category {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.clients__showcase:hover .clients__carousel {
   animation-play-state: paused;
 }
 
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 0;
+  background-color: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo interactivo para testimonials */
+.testimonials__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 70% 60%, rgba(240, 215, 140, 0.05) 0%, transparent 20%);
+  animation: testimonialsPulse 20s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes testimonialsPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.testimonials .container {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials__title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.testimonials__title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 15px auto 0;
+}
+
+.testimonials__description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-color);
+}
+
+.testimonial-card__quote {
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+.testimonial-card__content {
+  margin-bottom: 25px;
+}
+
+.testimonial-card__content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  font-style: italic;
+  margin: 0;
+}
+
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-card__avatar {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.testimonial-card__info h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0 0 5px 0;
+}
+
+.testimonial-card__info span {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  opacity: 0.7;
+}
+
+.testimonials__trust {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.testimonials__trust-text {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.testimonials__trust-highlight {
+  color: var(--accent-color);
+  font-weight: 600;
 }
 
 /* About Section */
@@ -1145,56 +1344,60 @@ body {
 
 /* Formulario de Contacto */
 .contact__form-section {
-  margin-top: 40px;
-  padding: 30px;
   background-color: white;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
+  padding: 40px;
+  height: fit-content;
+  position: sticky;
+  top: 120px;
 }
 
 .contact__form-title {
   font-family: 'Merriweather', serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--primary-color);
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .contact__form-title i {
   color: var(--accent-color);
+  font-size: 1.5rem;
 }
 
 .contact__form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
 .form__group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .form__group label {
   font-weight: 600;
   color: var(--primary-color);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .form__group input,
 .form__group select,
 .form__group textarea {
-  padding: 12px 15px;
+  padding: 15px 18px;
   border: 2px solid #e0e0e0;
   border-radius: var(--border-radius);
   font-family: inherit;
   font-size: 1rem;
   transition: var(--transition);
   background-color: white;
+  width: 100%;
 }
 
 .form__group input:focus,
@@ -1207,15 +1410,17 @@ body {
 
 .form__group textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .form__submit {
   align-self: flex-start;
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 15px 30px;
+  font-size: 1rem;
 }
 
 .form__submit:hover {
@@ -1374,13 +1579,14 @@ body {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 100%;
+    width: 80%;
     height: 100vh;
     background-color: var(--secondary-color);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: var(--transition);
+    z-index: 1001;
   }
 
   .nav__menu.show {
@@ -1393,7 +1599,7 @@ body {
   }
 
   .nav__link {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .nav__toggle,
@@ -1408,20 +1614,20 @@ body {
   }
 
   .nav__logo {
-    height: 70px; /* Ajuste para móvil */
+    height: 60px;
   }
 
   .nav__title {
-    font-size: 0.75rem; /* Más pequeño en móvil */
+    font-size: 0.8rem;
   }
 
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .hero__buttons {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
   }
 
   .page-title {
@@ -1433,8 +1639,8 @@ body {
   }
 
   .stats__grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .services__grid {
@@ -1448,7 +1654,6 @@ body {
 
   .installations__content {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 
   .contact__content {
@@ -1457,33 +1662,101 @@ body {
   }
 
   .footer__info {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
+  /* Nuevos estilos para clientes */
   .clients__title {
-    padding: 0 20px;
-    font-size: 0.9rem;
+    font-size: 2rem;
   }
 
-  .clients__carousel-wrapper {
-    margin-left: 150px;
+  .clients__carousel {
+    gap: 20px;
+    animation-duration: 40s;
+  }
+
+  .client-card {
+    flex: 0 0 250px;
+    padding: 25px 15px;
+    min-height: 180px;
+  }
+
+  .client-card__icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .client-card__name {
+    font-size: 1.1rem;
+  }
+
+  /* Estilos para testimonios */
+  .testimonials__title {
+    font-size: 2rem;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .testimonial-card {
+    padding: 25px;
+  }
+
+  .testimonial-card__content p {
+    font-size: 0.95rem;
+  }
+
+  /* Estilos para formulario de contacto */
+  .contact__form-section {
+    position: static;
+    padding: 30px;
+  }
+
+  .contact__form-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .contact__form {
+    gap: 20px;
+  }
+
+  .form__group input,
+  .form__group select,
+  .form__group textarea {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  .form__group textarea {
+    min-height: 120px;
+  }
+
+  .form__submit {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .botones-mapa {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 
   .btn-contacto {
-    width: 100%;
-    max-width: 300px;
+    padding: 15px 20px;
+    font-size: 0.85rem;
     justify-content: center;
   }
 
   .gallery-slider__btn {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
 
   .gallery-slider__btn--prev {
@@ -1495,12 +1768,12 @@ body {
   }
 
   .image-modal__btn {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 
   .image-modal__navigation {
-    padding: 0 10px;
+    gap: 10px;
   }
 }
 
@@ -1510,7 +1783,7 @@ body {
   }
 
   .nav__logo {
-    height: 60px;
+    height: 50px;
   }
 
   .nav__title {
@@ -1518,7 +1791,7 @@ body {
   }
 
   .hero__title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .page-title {
@@ -1530,24 +1803,109 @@ body {
   }
 
   .stats__grid {
-    grid-template-columns: 1fr;
+    gap: 25px;
   }
 
-  .clients__carousel-wrapper {
-    margin-left: 120px;
+  .clients__carousel {
+    gap: 15px;
+    animation-duration: 30s;
   }
 
-  .clients__title {
+  .client-card {
+    flex: 0 0 220px;
+    padding: 20px 12px;
+    min-height: 160px;
+  }
+
+  .client-card__icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .client-card__name {
+    font-size: 1rem;
+  }
+
+  .client-card__category {
     font-size: 0.8rem;
   }
 
+  .clients__title {
+    font-size: 1.8rem;
+  }
+
+  .testimonials__title {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-card__content p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-card__quote {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    top: -12px;
+    left: 25px;
+  }
+
+  .testimonial-card__avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .testimonial-card__info h4 {
+    font-size: 1rem;
+  }
+
+  .testimonial-card__info span {
+    font-size: 0.8rem;
+  }
+
+  .contact__form-section {
+    padding: 25px;
+  }
+
+  .contact__form-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .contact__form {
+    gap: 18px;
+  }
+
+  .form__group input,
+  .form__group select,
+  .form__group textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .form__group textarea {
+    min-height: 100px;
+  }
+
+  .form__submit {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
   .gallery-slider__btn {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 
   .image-modal__btn {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
 }
