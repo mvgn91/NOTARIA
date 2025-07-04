@@ -402,7 +402,13 @@ function initTestimonialsSlider() {
 
     function goToSlide(idx) {
         current = (idx + slides.length) % slides.length;
-        track.style.transform = `translateX(-${current * 100}%)`;
+        slides.forEach((slide, i) => {
+            if (i === current) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+            }
+        });
         updateDots();
     }
 
