@@ -559,8 +559,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin: 0 auto 20px auto;
   transition: var(--transition);
   box-shadow: var(--shadow);
 }
