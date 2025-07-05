@@ -196,17 +196,9 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--text-light);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   line-height: 1.3;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.mobile-hero__subtitle {
-  font-size: 1rem;
-  color: var(--text-light);
-  opacity: 0.9;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-hero__buttons {

@@ -375,20 +375,48 @@ body {
   transform: translateY(-2px);
 }
 
-/* Page Header */
+/* Page Header - Base */
 .page-header {
-  background: linear-gradient(135deg, 
-    rgba(45, 76, 57, 0.9) 0%, 
-    rgba(26, 61, 42, 0.8) 50%, 
-    rgba(45, 76, 57, 0.9) 100%
-  ),
-  url('https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: var(--text-light);
   padding: 120px 0 60px;
   text-align: center;
+}
+
+/* Page Header específicos por página */
+/* Nosotros - Equipo de trabajo */
+body:has([href="nosotros.html"].active) .page-header,
+.page-header.nosotros {
+  background: linear-gradient(135deg, 
+    rgba(45, 76, 57, 0.9) 0%, 
+    rgba(26, 61, 42, 0.8) 50%, 
+    rgba(45, 76, 57, 0.9) 100%
+  ),
+  url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop');
+}
+
+/* Servicios - Juzgados/Área legal */
+body:has([href="servicios.html"].active) .page-header,
+.page-header.servicios {
+  background: linear-gradient(135deg, 
+    rgba(45, 76, 57, 0.9) 0%, 
+    rgba(26, 61, 42, 0.8) 50%, 
+    rgba(45, 76, 57, 0.9) 100%
+  ),
+  url('https://images.pexels.com/photos/8112198/pexels-photo-8112198.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop');
+}
+
+/* Ubicación - Vista aérea de ciudad */
+body:has([href="ubicacion.html"].active) .page-header,
+.page-header.ubicacion {
+  background: linear-gradient(135deg, 
+    rgba(45, 76, 57, 0.9) 0%, 
+    rgba(26, 61, 42, 0.8) 50%, 
+    rgba(45, 76, 57, 0.9) 100%
+  ),
+  url('https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop');
 }
 
 .page-title {
