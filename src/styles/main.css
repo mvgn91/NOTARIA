@@ -687,13 +687,19 @@ body:has([href="ubicacion.html"].active) .page-header,
 /* Clients Section */
 .clients {
   padding: 80px 0;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1a3d2a 100%);
-  color: var(--text-light);
+  background: #f6f3eb;
+  color: var(--primary-color);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .clients__header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .clients__title {
@@ -711,8 +717,9 @@ body:has([href="ubicacion.html"].active) .page-header,
 }
 
 .clients__showcase {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 .clients__carousel {
@@ -722,13 +729,17 @@ body:has([href="ubicacion.html"].active) .page-header,
 }
 
 .client-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--border-radius);
-  padding: 30px 20px;
-  text-align: center;
-  transition: var(--transition);
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: none;
 }
 
 .client-card:hover {
@@ -737,28 +748,24 @@ body:has([href="ubicacion.html"].active) .page-header,
 }
 
 .client-card__icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-  color: var(--primary-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin: 0 auto 20px;
+  background: none !important;
+  color: var(--primary-color) !important;
+  border: none !important;
+  font-size: 3rem !important;
+  margin-bottom: 10px !important;
 }
 
 .client-card__name {
+  color: var(--primary-color) !important;
   font-family: 'Lora', serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 1.4rem !important;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 !important;
 }
 
 .client-card__category {
-  font-size: 0.9rem;
-  opacity: 0.8;
+  display: none !important;
 }
 
 /* Services Section */
@@ -1575,7 +1582,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 .clients__marquee {
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 100vw;
   background: #f6f3eb;
 }
 
@@ -1583,7 +1590,9 @@ body:has([href="ubicacion.html"].active) .page-header,
   display: flex;
   width: max-content;
   animation: marquee-clients 30s linear infinite;
-  gap: 30px;
+  gap: 80px;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .client-card__icon {
@@ -1612,23 +1621,38 @@ body:has([href="ubicacion.html"].active) .page-header,
 @media screen and (max-width: 1024px) {
   .clients__marquee-track {
     animation-duration: 40s;
+    gap: 40px;
+  }
+  .client-card {
+    min-width: 120px;
+  }
+  .client-card__icon, .client-card__icon i {
+    font-size: 2.2rem !important;
+  }
+  .client-card__name {
+    font-size: 1.1rem !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .clients__marquee {
-    overflow: visible;
-    background: none;
+  .clients {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 40px 0;
+  }
+  .clients__showcase, .clients__marquee {
+    width: 100%;
   }
   .clients__marquee-track {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     animation: none;
     gap: 20px;
+    padding: 0;
   }
-  .client-card__icon,
-  .client-card__icon i,
-  .client-card__name {
-    color: inherit !important;
+  .client-card {
+    min-width: 0;
   }
 }
