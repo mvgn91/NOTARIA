@@ -1304,22 +1304,21 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .footer__bottom-content {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
-  gap: 0;
+  width: 100%;
 }
 
 .footer__credits {
-  position: absolute;
-  left: 0;
   display: flex;
   align-items: center;
   cursor: pointer;
   transition: var(--transition);
+  margin-right: auto;
   margin-left: 24px;
+  position: relative;
   z-index: 2;
-  height: 100%;
 }
 
 .footer__credits-icon {
@@ -1334,10 +1333,9 @@ body:has([href="ubicacion.html"].active) .page-header,
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.footer__credits-icon i,
-.footer__credits-icon .bx {
-  font-size: 1.6rem !important;
-  color: #ffd700 !important;
+.footer__credits-icon i {
+  font-size: 1.6rem;
+  color: #ffd700;
   transition: var(--transition);
   z-index: 3;
   display: flex;
@@ -1382,9 +1380,8 @@ body:has([href="ubicacion.html"].active) .page-header,
   transform: scale(1.1);
 }
 
-.footer__credits:hover .footer__credits-icon i,
-.footer__credits:hover .footer__credits-icon .bx {
-  color: #ffed4e !important;
+.footer__credits:hover .footer__credits-icon i {
+  color: #ffed4e;
 }
 
 .footer__credits:hover .footer__credits-label {
@@ -1448,6 +1445,7 @@ body:has([href="ubicacion.html"].active) .page-header,
     position: static;
     align-self: flex-end;
     margin-left: 0;
+    margin-right: 0;
   }
   .footer__copyright {
     text-align: center;
