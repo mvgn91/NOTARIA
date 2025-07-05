@@ -1304,18 +1304,9 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .footer__bottom-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-}
-
-.footer__copyright {
-  flex: 1;
-}
-
-.footer__copyright p {
-  margin: 0;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  gap: 24px;
 }
 
 .footer__credits {
@@ -1324,6 +1315,8 @@ body:has([href="ubicacion.html"].active) .page-header,
   align-items: center;
   cursor: pointer;
   transition: var(--transition);
+  margin-left: 8px;
+  z-index: 2;
 }
 
 .footer__credits-icon {
@@ -1332,49 +1325,53 @@ body:has([href="ubicacion.html"].active) .page-header,
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.18);
   border-radius: 50%;
   transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .footer__credits-icon i {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #ffd700;
   transition: var(--transition);
+  z-index: 3;
 }
 
 .footer__credits-label {
   position: absolute;
-  right: 50px;
-  background: rgba(0, 0, 0, 0.8);
+  left: 48px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: rgba(0, 0, 0, 0.88);
   color: var(--text-light);
-  padding: 8px 12px;
+  padding: 8px 16px;
   border-radius: var(--border-radius);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   white-space: nowrap;
   opacity: 0;
-  transform: translateX(10px);
-  transition: var(--transition);
   pointer-events: none;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
 .footer__credits-label::after {
   content: '';
   position: absolute;
-  right: -5px;
+  left: -5px;
   top: 50%;
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-left: 5px solid rgba(0, 0, 0, 0.8);
+  border-right: 5px solid rgba(0, 0, 0, 0.88);
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
 
 .footer__credits:hover .footer__credits-icon {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.28);
   transform: scale(1.1);
 }
 
@@ -1384,7 +1381,18 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .footer__credits:hover .footer__credits-label {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(-50%) translateX(0);
+}
+
+.footer__copyright {
+  flex: 1;
+  text-align: left;
+}
+
+.footer__copyright p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 /* Responsive Design */
@@ -1429,6 +1437,7 @@ body:has([href="ubicacion.html"].active) .page-header,
   
   .footer__credits {
     align-self: flex-end;
+    margin-left: 0;
   }
   
   .page-header {
