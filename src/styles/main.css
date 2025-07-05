@@ -1576,13 +1576,28 @@ body:has([href="ubicacion.html"].active) .page-header,
   overflow: hidden;
   position: relative;
   width: 100%;
+  background: #f6f3eb;
 }
 
 .clients__marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-clients 20s linear infinite;
+  animation: marquee-clients 30s linear infinite;
   gap: 30px;
+}
+
+.client-card__icon {
+  background: none;
+  color: var(--primary-color) !important;
+  border: none;
+}
+
+.client-card__icon i {
+  color: var(--primary-color) !important;
+}
+
+.client-card__name {
+  color: var(--primary-color) !important;
 }
 
 @keyframes marquee-clients {
@@ -1596,18 +1611,24 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 @media screen and (max-width: 1024px) {
   .clients__marquee-track {
-    animation-duration: 30s;
+    animation-duration: 40s;
   }
 }
 
 @media screen and (max-width: 768px) {
   .clients__marquee {
     overflow: visible;
+    background: none;
   }
   .clients__marquee-track {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     animation: none;
     gap: 20px;
+  }
+  .client-card__icon,
+  .client-card__icon i,
+  .client-card__name {
+    color: inherit !important;
   }
 }
