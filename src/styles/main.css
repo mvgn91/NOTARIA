@@ -1523,8 +1523,26 @@ body:has([href="ubicacion.html"].active) .page-header,
   }
   
   .footer__info {
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 15px !important;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+  
+  .footer__item {
+    min-width: 180px;
+    flex: 0 0 auto;
+  }
+  
+  .footer__credits {
+    position: static;
+    align-self: flex-end;
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .gallery-slider__btn {
@@ -1584,6 +1602,9 @@ body:has([href="ubicacion.html"].active) .page-header,
   position: relative;
   width: 100vw;
   background: #f6f3eb;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+  padding-left: 0 !important;
 }
 
 .clients__marquee-track {
@@ -1593,6 +1614,7 @@ body:has([href="ubicacion.html"].active) .page-header,
   gap: 80px;
   align-items: center;
   padding: 20px 0;
+  margin-left: 0 !important;
 }
 
 .client-card__icon {
@@ -1622,6 +1644,10 @@ body:has([href="ubicacion.html"].active) .page-header,
   .clients__marquee-track {
     animation-duration: 40s;
     gap: 40px;
+    display: flex;
+    grid-template-columns: none;
+    animation: marquee-clients 40s linear infinite;
+    padding: 20px 0;
   }
   .client-card {
     min-width: 120px;
@@ -1631,6 +1657,20 @@ body:has([href="ubicacion.html"].active) .page-header,
   }
   .client-card__name {
     font-size: 1.1rem !important;
+  }
+  .footer__info {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 20px !important;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+  .footer__item {
+    min-width: 220px;
+    flex: 0 0 auto;
   }
 }
 
@@ -1646,13 +1686,101 @@ body:has([href="ubicacion.html"].active) .page-header,
     width: 100%;
   }
   .clients__marquee-track {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    animation: none;
     gap: 20px;
     padding: 0;
+    animation-duration: 40s;
+    display: flex;
+    grid-template-columns: none;
+    animation: marquee-clients 40s linear infinite;
   }
   .client-card {
-    min-width: 0;
+    min-width: 100px;
+  }
+  .footer__info {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 15px !important;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+  .footer__item {
+    min-width: 180px;
+    flex: 0 0 auto;
+  }
+}
+
+/* Footer: MVGN LABS tag centrado debajo del copyright */
+.footer__bottom-content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0 0 0;
+  position: static;
+  background: none;
+  cursor: default;
+}
+
+.footer__credits-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+
+.footer__credits-icon i {
+  font-size: 1.6rem;
+  color: #ffd700;
+}
+
+.footer__credits-label {
+  position: static;
+  opacity: 1;
+  background: none;
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  transition: none;
+}
+
+.footer__credits-label::after {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .clients__marquee {
+    margin-left: calc(-50vw + 50%);
+    left: 0;
+    padding-left: 0 !important;
+  }
+  .clients__marquee-track {
+    margin-left: 0 !important;
+  }
+  .footer__bottom-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__credits {
+    margin: 20px 0 0 0;
   }
 }
