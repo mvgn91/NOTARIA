@@ -1315,8 +1315,8 @@ body:has([href="ubicacion.html"].active) .page-header,
   align-items: center;
   cursor: pointer;
   transition: var(--transition);
-  margin-right: auto;
-  margin-left: 24px;
+  margin-right: 0;
+  margin-left: 16px;
   position: relative;
   z-index: 2;
 }
@@ -1390,8 +1390,8 @@ body:has([href="ubicacion.html"].active) .page-header,
 }
 
 .footer__copyright {
-  flex: 0 1 auto;
-  margin: 0 auto;
+  flex: 1 1 0;
+  margin: 0 10vw 0 0;
   text-align: center;
 }
 
@@ -1427,6 +1427,15 @@ body:has([href="ubicacion.html"].active) .page-header,
   
   .installations__gallery {
     order: 2;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__copyright {
+    margin: 0 4vw 0 0;
+  }
+  .footer__credits {
+    margin-left: 8px;
   }
 }
 
