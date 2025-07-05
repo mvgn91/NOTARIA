@@ -506,7 +506,8 @@ body {
 .mobile-footer {
   background: linear-gradient(135deg, var(--primary-color) 0%, #1a3d2a 100%);
   color: var(--text-light);
-  padding: 25px 10px 10px 10px;
+  padding: 10px 0 8px 0;
+  text-align: center;
 }
 
 .mobile-footer__container {
@@ -550,9 +551,10 @@ body {
 }
 
 .mobile-footer__copyright p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   opacity: 0.8;
   margin: 0;
+  letter-spacing: 0.5px;
 }
 
 .mobile-footer__actions, .mobile-footer__desktop-btn, .mobile-footer__credits {
@@ -608,4 +610,39 @@ body {
   height: 50px;
   font-size: 1rem;
   margin: 0;
+}
+
+.mobile-features {
+  background: #f6f3eb;
+  padding: 18px 0 10px 0;
+  margin-bottom: 0;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.mobile-features__list {
+  list-style: none;
+  padding: 0 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-features__list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #1a3d2a;
+  font-weight: 500;
+  gap: 10px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.mobile-features__list i {
+  color: #1db954;
+  font-size: 1.2em;
 }

@@ -1303,6 +1303,15 @@ body:has([href="ubicacion.html"].active) .page-header,
   padding-top: 20px;
   text-align: center;
   padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__copyright {
+  width: 100%;
+  text-align: center;
 }
 
 .footer__bottom p {
