@@ -1893,10 +1893,11 @@ body {
     border-bottom: 1px solid rgba(45, 76, 57, 0.1);
     transition: var(--transition);
     font-family: 'Inter', sans-serif;
-    margin-top: 0;
-    margin-left: 0;
+    margin: 0;
     width: 100%;
     justify-content: flex-start;
+    background: none;
+    box-shadow: none;
   }
 
   .nav__mobile-toggle:hover {
@@ -1940,6 +1941,10 @@ body {
   }
 
   .nav__toggle {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
     background: rgba(255, 255, 255, 0.9);
     width: 45px;
     height: 45px;
@@ -1949,6 +1954,7 @@ body {
     justify-content: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(45, 76, 57, 0.1);
+    margin-left: auto;
   }
 
   .nav__toggle:hover {
