@@ -1571,3 +1571,43 @@ body:has([href="ubicacion.html"].active) .page-header,
     padding: 20px 15px;
   }
 }
+
+.clients__marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.clients__marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-clients 20s linear infinite;
+  gap: 30px;
+}
+
+@keyframes marquee-clients {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .clients__marquee-track {
+    animation-duration: 30s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .clients__marquee {
+    overflow: visible;
+  }
+  .clients__marquee-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    animation: none;
+    gap: 20px;
+  }
+}
