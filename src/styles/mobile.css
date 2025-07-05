@@ -643,6 +643,6 @@ body {
 }
 
 .mobile-features__list i {
-  color: #1db954;
+  color: var(--primary-color);
   font-size: 1.2em;
 }
