@@ -813,7 +813,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 /* Services Section */
 .services {
   padding: 80px 0;
-  background-color: var(--background-light);
+  background: linear-gradient(120deg, #f6f3eb 0%, #e0e4de 60%, #e6f0ea 100%);
 }
 
 .services__grid {
@@ -2191,27 +2191,16 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .service-showcase__item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 48px rgba(45, 76, 57, 0.18);
+  border: 2px solid var(--primary-color);
 }
 
 .service-showcase__item:hover::before {
-  transform: scaleX(1);
-}
-
-.service-showcase__icon {
-  width: 80px;
-  height: 80px;
   background: var(--primary-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
 }
 
 .service-showcase__item:hover .service-showcase__icon {
-  transform: scale(1.1);
+  background: var(--primary-color);
   box-shadow: 0 8px 24px rgba(45, 76, 57, 0.3);
 }
 
@@ -2255,6 +2244,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 .service-showcase__item:hover .service-feature {
   background: #e8f0e8;
   border-color: var(--primary-color);
+  color: var(--primary-color);
   transform: translateY(-1px);
 }
 
