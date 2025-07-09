@@ -730,12 +730,12 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .gradient-bg {
   background: linear-gradient(90deg, #f6f3eb 60%, #e0e4de 100%);
-  padding: 32px 0 18px 0;
+  padding: 48px 0 18px 0;
 }
 .clients__header {
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: -30px;
+  margin-bottom: 40px;
+  margin-top: -10px;
 }
 
 .clients__title {
@@ -1933,8 +1933,34 @@ body:has([href="ubicacion.html"].active) .page-header,
 .timeline-item.right .timeline-icon {
   left: auto;
   right: -48px;
-  top: 32px;
-  transform: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.timeline-item.left:last-child .timeline-content {
+  align-items: center;
+  text-align: center;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.timeline-item.left:last-child .timeline-title {
+  margin-bottom: 32px;
+}
+.timeline-item.left:last-child .timeline-values-list {
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 12px;
+}
+.timeline-item.left:last-child .timeline-values-list li {
+  font-size: 1.18rem;
+  background: #f6f3eb;
+  border-radius: 12px;
+  padding: 10px 24px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(34,51,40,0.06);
+  min-width: 260px;
+  max-width: 420px;
+  justify-content: center;
 }
 @media screen and (max-width: 900px) {
   .timeline-content {
