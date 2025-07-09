@@ -1936,6 +1936,11 @@ body:has([href="ubicacion.html"].active) .page-header,
   top: 50%;
   transform: translateY(-50%);
 }
+.timeline-item.left:last-child .timeline-icon {
+  left: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 /* Centrar texto de la sección de Valores en el timeline */
 .timeline-item.left:last-child .timeline-content {
   align-items: center;
@@ -2060,6 +2065,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 /* Carrusel de clientes: más espacio y predominancia de iconos/nombres */
 .clients__marquee-track {
   gap: 80px;
+  margin-top: 32px;
 }
 .client-card {
   min-width: 220px;
@@ -2070,6 +2076,7 @@ body:has([href="ubicacion.html"].active) .page-header,
   align-items: center;
   justify-content: flex-start;
   padding: 0 10px !important;
+  margin-top: 0;
 }
 .client-card__icon {
   font-size: 3.6rem !important;
