@@ -728,9 +728,14 @@ body:has([href="ubicacion.html"].active) .page-header,
   margin-right: -50vw;
 }
 
+.gradient-bg {
+  background: linear-gradient(90deg, #f6f3eb 60%, #e0e4de 100%);
+  padding: 32px 0 18px 0;
+}
 .clients__header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-top: -30px;
 }
 
 .clients__title {
@@ -1928,6 +1933,8 @@ body:has([href="ubicacion.html"].active) .page-header,
 .timeline-item.right .timeline-icon {
   left: auto;
   right: -48px;
+  top: 32px;
+  transform: none;
 }
 @media screen and (max-width: 900px) {
   .timeline-content {
