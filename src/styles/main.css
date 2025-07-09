@@ -690,7 +690,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 .mission-vision__icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: var(--primary-color);
   color: var(--text-light);
   border-radius: 50%;
   display: flex;
@@ -841,7 +841,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 .service-card__icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: var(--primary-color);
   color: var(--text-light);
   border-radius: 50%;
   display: flex;
@@ -1284,8 +1284,8 @@ body:has([href="ubicacion.html"].active) .page-header,
 .footer__icon {
   width: 45px;
   height: 45px;
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--text-light);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1842,7 +1842,7 @@ body:has([href="ubicacion.html"].active) .page-header,
   z-index: 2;
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: var(--primary-color);
   color: var(--text-light);
   border-radius: 50%;
   display: flex;
@@ -1913,7 +1913,7 @@ body:has([href="ubicacion.html"].active) .page-header,
   z-index: 2;
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: var(--primary-color);
   color: var(--text-light);
   border-radius: 50%;
   display: flex;
@@ -2099,23 +2099,24 @@ body:has([href="ubicacion.html"].active) .page-header,
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1rem 1.5rem;
-  background: #1e7e4a;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   transition: all 0.3s ease;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .about__feature:hover, .installations__feature:hover {
-  background: #156b3d;
+  background: #1a3d2a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(30, 126, 74, 0.3);
+  box-shadow: 0 4px 15px rgba(45, 76, 57, 0.3);
 }
 
 .about__feature i, .installations__feature i {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
   color: white;
 }
 
@@ -2163,7 +2164,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 .service-showcase__icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #1e7e4a, #2d9d5f);
+  background: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2174,7 +2175,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .service-showcase__item:hover .service-showcase__icon {
   transform: scale(1.1);
-  box-shadow: 0 8px 24px rgba(30, 126, 74, 0.3);
+  box-shadow: 0 8px 24px rgba(45, 76, 57, 0.3);
 }
 
 .service-showcase__icon i {
@@ -2185,7 +2186,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 .service-showcase__title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e7e4a;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   line-height: 1.3;
 }
@@ -2205,7 +2206,7 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .service-feature {
   background: #f8f9fa;
-  color: #1e7e4a;
+  color: var(--primary-color);
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
   font-size: 0.85rem;
@@ -2215,8 +2216,8 @@ body:has([href="ubicacion.html"].active) .page-header,
 }
 
 .service-showcase__item:hover .service-feature {
-  background: #e8f5e8;
-  border-color: #1e7e4a;
+  background: #e8f0e8;
+  border-color: var(--primary-color);
   transform: translateY(-1px);
 }
 
@@ -2224,7 +2225,7 @@ body:has([href="ubicacion.html"].active) .page-header,
   text-align: center;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1e7e4a;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   position: relative;
 }
@@ -2237,7 +2238,7 @@ body:has([href="ubicacion.html"].active) .page-header,
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #1e7e4a, #2d9d5f);
+  background: var(--primary-color);
   border-radius: 2px;
 }
 
