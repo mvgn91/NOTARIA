@@ -546,3 +546,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Animación de timeline interactivo en misión, visión y valores
+function animateTimelineOnScroll() {
+    const items = document.querySelectorAll('.timeline-item[data-animate]');
+    const trigger = window.innerHeight * 0.85;
+    items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < trigger) {
+            item.classList.add('visible');
+        }
+    });
+}
+window.addEventListener('scroll', animateTimelineOnScroll);
+window.addEventListener('DOMContentLoaded', animateTimelineOnScroll);
