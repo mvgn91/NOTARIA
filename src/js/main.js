@@ -553,8 +553,10 @@ function animateTimelineOnScroll() {
     const trigger = window.innerHeight * 0.85;
     items.forEach(item => {
         const rect = item.getBoundingClientRect();
-        if (rect.top < trigger) {
+        if (rect.top < trigger && rect.bottom > 0) {
             item.classList.add('visible');
+        } else {
+            item.classList.remove('visible');
         }
     });
 }
