@@ -2215,12 +2215,37 @@ body:has([href="ubicacion.html"].active) .page-header,
   color: white;
 }
 
+.service-showcase__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.service-showcase__icon {
+  width: 54px;
+  height: 54px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.7rem;
+  box-shadow: 0 2px 8px rgba(34,51,40,0.10);
+}
+
 .service-showcase__title {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 1rem;
   line-height: 1.3;
+  gap: 0.7rem;
 }
 
 .service-showcase__description {
@@ -2325,5 +2350,40 @@ body:has([href="ubicacion.html"].active) .page-header,
 }
 .installations__amenities--white .installations__feature {
   color: #fff;
+}
+
+/* Botones tipo Material Design para amenidades */
+.amenidad-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  border: none;
+  border-radius: 2em;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5em 1.3em;
+  box-shadow: 0 2px 8px rgba(34,51,40,0.10);
+  cursor: default;
+  transition: background 0.2s, color 0.2s;
+}
+.amenidad-btn--verde {
+  background: var(--primary-color);
+  color: #fff;
+}
+.amenidad-btn--blanco {
+  background: #fff;
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
+}
+.amenidad-btn i {
+  font-size: 1.2em;
+  margin-right: 0.3em;
+}
+
+/* Amenidades en fila para instalaciones */
+.installations__amenities--white {
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
