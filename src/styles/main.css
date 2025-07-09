@@ -751,6 +751,12 @@ body:has([href="ubicacion.html"].active) .page-header,
   width: 100vw;
   margin: 0;
   padding: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
 }
 
 .clients__carousel {
@@ -1576,9 +1582,10 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .clients__marquee-track {
   display: flex;
+  flex-direction: row;
   width: max-content;
-  animation: marquee-clients 30s linear infinite;
-  gap: 80px;
+  min-width: 100vw;
+  gap: 30px;
   align-items: center;
   padding: 0 !important;
   margin: 0 !important;
