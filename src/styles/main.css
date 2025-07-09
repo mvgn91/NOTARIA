@@ -2300,3 +2300,10 @@ body:has([href="ubicacion.html"].active) .page-header,
   }
 }
 
+.installations__amenities--white .installations__feature span {
+  color: #fff;
+}
+.installations__amenities--white .installations__feature {
+  color: #fff;
+}
+
