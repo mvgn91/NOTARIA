@@ -2090,34 +2090,47 @@ body:has([href="ubicacion.html"].active) .page-header,
 .about__amenities, .installations__amenities {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-top: 2rem;
 }
 
 .about__feature, .installations__feature {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  background: var(--primary-color);
-  color: white;
+  background: none;
+  color: var(--primary-color);
   border-radius: 2rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.about__feature:hover, .installations__feature:hover {
-  background: #1a3d2a;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(45, 76, 57, 0.3);
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: none;
+  cursor: default;
+  transition: color 0.2s;
 }
 
 .about__feature i, .installations__feature i {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-  color: white;
+  width: 2.2em;
+  height: 2.2em;
+  min-width: 2.2em;
+  min-height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.2em;
+  margin-right: 0.7em;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(34,51,40,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+
+.about__feature span, .installations__feature span {
+  color: var(--primary-color);
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 /* =========================
