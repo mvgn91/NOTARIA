@@ -2223,15 +2223,15 @@ body:has([href="ubicacion.html"].active) .page-header,
 }
 
 .service-showcase__icon {
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
   background: var(--primary-color);
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.1rem;
   margin-bottom: 0.5rem;
   margin-right: 0.7rem;
   box-shadow: 0 2px 8px rgba(34,51,40,0.10);
@@ -2378,6 +2378,10 @@ body:has([href="ubicacion.html"].active) .page-header,
 .amenidad-btn i {
   font-size: 1.2em;
   margin-right: 0.3em;
+}
+
+.amenidad-btn--verde i {
+  font-size: 1.45em;
 }
 
 /* Amenidades en fila para instalaciones */
