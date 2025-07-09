@@ -908,7 +908,8 @@ body:has([href="ubicacion.html"].active) .page-header,
 .about__gallery,
 .installations__gallery {
   position: relative;
-  max-width: 700px;
+  max-width: 100%;
+  width: 520px;
   margin: 0 auto;
 }
 
@@ -921,9 +922,12 @@ body:has([href="ubicacion.html"].active) .page-header,
 
 .gallery-slider__container {
   position: relative;
-  height: 520px;
+  width: 100%;
+  height: 380px;
+  max-width: 520px;
   max-height: 70vh;
-  min-height: 340px;
+  min-height: 260px;
+  margin: 0 auto;
 }
 
 .gallery-slider__slide {
@@ -1676,11 +1680,13 @@ body:has([href="ubicacion.html"].active) .page-header,
 @media screen and (max-width: 600px) {
   .about__gallery,
   .installations__gallery {
+    width: 100%;
     max-width: 98vw;
   }
   .gallery-slider__container {
     height: 200px;
     min-height: 120px;
+    max-width: 98vw;
   }
   .gallery-slider__btn {
     width: 38px;
