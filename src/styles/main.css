@@ -908,18 +908,22 @@ body:has([href="ubicacion.html"].active) .page-header,
 .about__gallery,
 .installations__gallery {
   position: relative;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .gallery-slider {
   position: relative;
-  border-radius: var(--border-radius);
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 8px 32px rgba(34,51,40,0.18), 0 1.5px 8px rgba(34,51,40,0.10);
 }
 
 .gallery-slider__container {
   position: relative;
-  height: 400px;
+  height: 520px;
+  max-height: 70vh;
+  min-height: 340px;
 }
 
 .gallery-slider__slide {
@@ -929,19 +933,22 @@ body:has([href="ubicacion.html"].active) .page-header,
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
   cursor: pointer;
+  z-index: 1;
 }
 
 .gallery-slider__slide.active {
   opacity: 1;
+  z-index: 2;
 }
 
 .gallery-slider__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(34,51,40,0.10);
 }
 
 .gallery-slider__slide:hover .gallery-slider__img {
@@ -949,57 +956,26 @@ body:has([href="ubicacion.html"].active) .page-header,
 }
 
 .gallery-slider__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 1.5rem;
+  background: rgba(255,255,255,0.95);
   color: var(--primary-color);
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: var(--transition);
-  z-index: 10;
-}
-
-.gallery-slider__btn:hover {
-  background: white;
-  transform: translateY(-50%) scale(1.1);
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 2px 8px rgba(34,51,40,0.10);
 }
 
 .gallery-slider__btn--prev {
-  left: 20px;
+  left: 24px;
 }
 
 .gallery-slider__btn--next {
-  right: 20px;
+  right: 24px;
 }
 
 .gallery-slider__indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.gallery-slider__indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid white;
-  background: transparent;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.gallery-slider__indicator.active,
-.gallery-slider__indicator:hover {
-  background: white;
+  bottom: 28px;
 }
 
 /* Installations Section */
@@ -1687,5 +1663,28 @@ body:has([href="ubicacion.html"].active) .page-header,
   .footer__item {
     min-width: 180px;
     flex: 0 0 auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery-slider__container {
+    height: 340px;
+    min-height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about__gallery,
+  .installations__gallery {
+    max-width: 98vw;
+  }
+  .gallery-slider__container {
+    height: 200px;
+    min-height: 120px;
+  }
+  .gallery-slider__btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
   }
 }
