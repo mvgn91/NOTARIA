@@ -1936,31 +1936,29 @@ body:has([href="ubicacion.html"].active) .page-header,
   top: 50%;
   transform: translateY(-50%);
 }
+/* Centrar texto de la sección de Valores en el timeline */
 .timeline-item.left:last-child .timeline-content {
   align-items: center;
   text-align: center;
-  padding-top: 56px;
-  padding-bottom: 56px;
 }
 .timeline-item.left:last-child .timeline-title {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .timeline-item.left:last-child .timeline-values-list {
   align-items: center;
   justify-content: center;
-  gap: 22px;
-  margin-top: 12px;
+  margin-top: 10px;
+  gap: 14px;
 }
 .timeline-item.left:last-child .timeline-values-list li {
-  font-size: 1.18rem;
-  background: #f6f3eb;
-  border-radius: 12px;
-  padding: 10px 24px;
-  margin: 0 auto;
-  box-shadow: 0 2px 8px rgba(34,51,40,0.06);
-  min-width: 260px;
-  max-width: 420px;
   justify-content: center;
+  text-align: center;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  min-width: 0;
+  max-width: 100%;
+  font-size: 1.08rem;
 }
 @media screen and (max-width: 900px) {
   .timeline-content {
@@ -2058,4 +2056,28 @@ body:has([href="ubicacion.html"].active) .page-header,
 .minimal-dots .gallery-slider__indicator:hover {
   background: var(--primary-color);
   opacity: 1;
+}
+/* Carrusel de clientes: más espacio y predominancia de iconos/nombres */
+.clients__marquee-track {
+  gap: 80px;
+}
+.client-card {
+  min-width: 220px;
+  max-width: 260px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px !important;
+}
+.client-card__icon {
+  font-size: 3.6rem !important;
+  width: 84px !important;
+  height: 84px !important;
+  margin-bottom: 18px !important;
+}
+.client-card__name {
+  font-size: 2.2rem !important;
+  margin-bottom: 0 !important;
 }
