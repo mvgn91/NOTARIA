@@ -2090,8 +2090,32 @@ body:has([href="ubicacion.html"].active) .page-header,
 .about__amenities, .installations__amenities {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 2.5rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.about__features, .installations__features {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .about__amenities, .installations__amenities {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  .about__features, .installations__features {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .about__feature, .installations__feature {
