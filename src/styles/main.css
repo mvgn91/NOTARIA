@@ -251,6 +251,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 
 .hero__slide {
@@ -263,11 +264,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s cubic-bezier(.4,0,.2,1);
+  z-index: 1;
 }
 
 .hero__slide.active {
   opacity: 1;
+  z-index: 2;
 }
 
 .hero__overlay {
@@ -276,21 +279,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(45, 76, 57, 0.8) 0%,
-    rgba(45, 76, 57, 0.6) 50%,
-    rgba(45, 76, 57, 0.8) 100%
-  );
-  z-index: 2;
+  background: linear-gradient(120deg, rgba(34,51,40,0.85) 60%, rgba(34,51,40,0.7) 100%);
+  z-index: 3;
 }
 
 .hero__content {
   position: relative;
-  z-index: 3;
-  text-align: center;
-  max-width: 800px;
-  padding: 0 20px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding-top: 120px;
 }
 
 .hero__title {
@@ -301,6 +302,36 @@ body {
   margin-bottom: 30px;
   line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero__title.impact {
+  font-family: 'Lora', serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 2px 4px 16px rgba(0,0,0,0.55), 0 1px 0 #222;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid #fff;
+  display: inline-block;
+  padding-bottom: 12px;
+  background: rgba(34, 51, 40, 0.10);
+  border-radius: 8px;
+}
+.hero__title-main {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+.hero__title-sub {
+  display: block;
+  font-size: 0.85em;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-top: 0.5rem;
 }
 
 .hero__buttons {
@@ -1367,6 +1398,20 @@ body:has([href="ubicacion.html"].active) .page-header,
   
   .installations__gallery {
     order: 2;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero__title.impact {
+    font-size: 2.5rem;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero__title.impact {
+    font-size: 1.5rem;
+    padding-bottom: 6px;
   }
 }
 
